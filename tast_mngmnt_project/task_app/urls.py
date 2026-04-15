@@ -5,10 +5,12 @@ from . import views
 urlpatterns = [
     path('profile/', views.ProfileListView.as_view(), name='profile'),
     path('profile/<int:pk>/', views.ProfileRUDView.as_view(), name='profile'),
+
     # Category
     path('category/', views.CategoryListView.as_view(), name='category_list'),
     path('category_detail/<int:pk>/', views.CategoryDetailView.as_view(), name='category_detail'),
     path('categories/<int:pk>/task/', views.CategoryTasksView.as_view(), name='category_tasks'),
+
     # Task
     path('task_list/', views.TaskListView.as_view(), name='task_list'),
     path('task_create/', views.TaskCreate.as_view(), name='task_create'),
